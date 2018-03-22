@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
@@ -193,6 +194,14 @@
     <Compile Include="Migrations\201803221548028_PopulateMembershipTypes.cs" />
     <Compile Include="Migrations\201803221548028_PopulateMembershipTypes.Designer.cs">
       <DependentUpon>201803221548028_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803221625576_ApplyDataAnnotationInCustomerName.cs" />
+    <Compile Include="Migrations\201803221625576_ApplyDataAnnotationInCustomerName.Designer.cs">
+      <DependentUpon>201803221625576_ApplyDataAnnotationInCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803221715570_AddUpdateModels.cs" />
+    <Compile Include="Migrations\201803221715570_AddUpdateModels.Designer.cs">
+      <DependentUpon>201803221715570_AddUpdateModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -266,6 +275,8 @@
     <Content Include="Views\Movie\Random.cshtml" />
     <Content Include="Views\Movie\RandomMovieAndCustomersMovies.cshtml" />
     <Content Include="Views\Shared\_NaveBarLayout.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\scripts\" />
@@ -293,6 +304,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803221548028_PopulateMembershipTypes.resx">
       <DependentUpon>201803221548028_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221625576_ApplyDataAnnotationInCustomerName.resx">
+      <DependentUpon>201803221625576_ApplyDataAnnotationInCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221715570_AddUpdateModels.resx">
+      <DependentUpon>201803221715570_AddUpdateModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
