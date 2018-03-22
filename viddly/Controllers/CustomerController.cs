@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -25,7 +26,9 @@ namespace viddly.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            var customers = _context.Custumers;
+
+            //eager loading is different of the lazy loading
+            var customers = _context.Custumers.Include(m => m.MembershipType);
             return View(customers);
         }
 

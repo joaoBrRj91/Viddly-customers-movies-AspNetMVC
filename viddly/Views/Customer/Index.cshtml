@@ -17,10 +17,13 @@
             <thead>
                 <tr class="info">
                     <th>
-                        @Html.DisplayNameFor(model => model.Nome)
+                        Name
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.IsSubscribedToNewsLetter)
+                        Customer liked News ?
+                    </th>
+                    <th>
+                        Discount Rate
                     </th>
                 </tr>
             </thead>
@@ -30,7 +33,7 @@
             {
                     <tr>
                         <td>
-                            @Html.ActionLink(item.Nome, "Details", "Customer", new { customerId = item.Id },null)
+                            @Html.ActionLink(item.Nome, "Details", "Customer", new { customerId = item.Id }, null)
                         </td>
                         <td>
                             @if (item.IsSubscribedToNewsLetter)
@@ -43,7 +46,9 @@
 
                             }
                         </td>
-
+                        <td>
+                            @item.MembershipType.DiscountRate%
+                        </td>
                     </tr>
                 }
 
