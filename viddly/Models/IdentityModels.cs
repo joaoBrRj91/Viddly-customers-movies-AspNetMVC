@@ -20,6 +20,8 @@ namespace viddly.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Customer> Custumers { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -29,5 +31,6 @@ namespace viddly.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }

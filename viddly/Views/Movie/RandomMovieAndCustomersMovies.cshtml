@@ -1,0 +1,29 @@
+﻿@model viddly.ViewModels.RandomMovieViewModel
+
+@{
+    ViewBag.Title = "RandomMovieAndCustomersMovies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    //Render any atributes dynamic
+    var className = Model.Customers.Count > 0 ? "popular" : null;
+}
+
+<h2 class="popular">@Model.Movie.Name</h2>
+
+@if (Model.Customers.Count() == 0)
+{
+   <p>No one has rented this movie before.</p>
+}
+else
+{
+<ul>
+    @foreach (var customer in Model.Customers)
+    {
+        <li>@customer.Nome</li>
+
+    }
+</ul>
+}
+
